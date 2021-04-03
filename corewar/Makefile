@@ -6,7 +6,8 @@
 #    By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 13:27:26 by mkarkaus          #+#    #+#              #
-#    Updated: 2021/04/03 13:27:28 by mkarkaus         ###   ########.fr        #
+#    Updated: 2021/04/03 13:37:14 by mkarkaus         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = corewar
