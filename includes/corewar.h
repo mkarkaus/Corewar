@@ -6,15 +6,19 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:33:24 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/03 10:50:59 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/09 16:43:42 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "op.h"
+#ifndef		COREWAR_H
+# define	COREWAR_H
 
-
-
-
+# include <fcntl.h>
+# include <sys/stat.h>
+# include <stdio.h>
+# include <errno.h>
+# include "../libft/includes/libft.h"
+# include "op.h"
 
 /*
 **
@@ -33,7 +37,7 @@
 **	pointing to in the arena. They are neutral and champions don't 'own' them.
 **
 **
-**	PC ('Program counter') is a (personal for every champion) index which shows in
+**	PC ('Program counter') is a (personal for every carrier) index which shows in
 **	what byte of champion's code the execution is in currently. The virtual machine
 **	has this index.(?)
 **
@@ -112,6 +116,26 @@
 **	8. 
 */
 
+/*
+**	Struct for useful information regarding the virtual machine
+*/
+
+typedef struct	s_corewar
+{
+	int			nbr_of_players;
+}				t_corewar;
+
+// /*
+// **	Struct to which all the properties of the players are stored
+// */
+
+typedef struct	s_player
+{
+	header_t		header;
+	unsigned int	nbr;
+	struct s_player	*next;
+}				t_player;
+
 typedef struct	s_op
 {
 	const char	name[6];
@@ -124,8 +148,7 @@ typedef struct	s_op
 	const int	nbr2;
 }				t_op;
 
-
-t_op    op_tab[17] =
+static const t_op    op_tab[17] =
 {
 	{
 		"live",
@@ -290,7 +313,7 @@ t_op    op_tab[17] =
 	{
 		0,
 		0,
-		{0},
+		0,
 		0,
 		0,
 		0,
@@ -298,3 +321,8 @@ t_op    op_tab[17] =
 		0
 	}
 };
+
+void	get_player_code(char *file);
+int		validate_champ();
+
+#endif
