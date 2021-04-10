@@ -6,7 +6,7 @@
 #    By: sreijola <sreijola@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:35:45 by sreijola          #+#    #+#              #
-#    Updated: 2021/04/03 13:37:16 by sreijola         ###   ########.fr        #
+#    Updated: 2021/04/10 18:58:23 by sreijola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 
 NAME = asm
 
-SRCS_ASM = main.c
+ASM_SRCS = main.c get_input.c write_bytecode.c
 
 LIB = ../libft/libft.a
 
@@ -23,16 +23,17 @@ FLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME):
-	@gcc $(ASM_SRCS) $(FLAGS) $(LIB) -o $(ASM)
+	@make -C ../libft
+	@gcc $(ASM_SRCS) $(FLAGS) $(LIB) -o $(NAME)
 	@echo "$(ASM) made"
 
 clean:
-	@make -C libft clean
+	@make -C ../libft clean
 	@echo "Object files removed from libft. Beep-Bop"
 
 fclean: clean
-	@make -C libft fclean
-	@rm -f $(ASM)
+	@make -C ../libft fclean
+	@rm -f $(NAME)
 	@echo "Binaries and object files gone."
 
 re: fclean all
