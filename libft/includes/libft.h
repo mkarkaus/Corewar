@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/18 14:57:46 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 13:51:22 by mkarkaus         ###   ########.fr       */
+/*   Created: 2021/04/10 14:31:21 by mkarkaus          #+#    #+#             */
+/*   Updated: 2021/04/10 14:31:23 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,5 +126,6 @@ void			ft_strarr_free(char **arr);
 void			ft_strarr_print(char **arr);
 
 void			ft_byterev(uint8_t *mem, unsigned int len);
+void			ft_exit(char *errstr);
 
 #endif

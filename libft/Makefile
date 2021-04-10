@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/10/30 11:50:18 by mkarkaus          #+#    #+#              #
-#    Updated: 2021/04/10 13:48:42 by mkarkaus         ###   ########.fr        #
+#    Created: 2021/04/10 14:31:40 by mkarkaus          #+#    #+#              #
+#    Updated: 2021/04/10 14:31:41 by mkarkaus         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ ft_strrev.c ft_strcut.c ft_onlydigits.c ft_free_array.c ft_pr_intarr.c \
 ft_pr_chararr.c ft_lstapp.c ft_lstprint.c ft_strarr_free.c ft_strarr_malloc.c \
 ft_strarrsize.c ft_lstfree.c ft_lstlen.c ft_lstprintint.c ft_strarr_print.c \
 ft_strarr_size.c ft_tabarr_free.c ft_tabarr_malloc.c ft_tabint_find.c \
-ft_tabnequ.c ft_arr_free.c ft_arr_malloc.c ft_strcat.c ft_pr_hex.c ft_byterev.c
+ft_tabnequ.c ft_arr_free.c ft_arr_malloc.c ft_strcat.c ft_pr_hex.c ft_exit.c \
+ft_byterev.c
 
 LIBFT_SRC = $(addprefix $(LIBFT_SRC_PATH), $(LIBFT_SRC_FILES))
 
