@@ -6,7 +6,7 @@
 #    By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 13:27:26 by mkarkaus          #+#    #+#              #
-#    Updated: 2021/04/08 19:12:22 by mkarkaus         ###   ########.fr        #
+#    Updated: 2021/04/10 17:46:03 by mkarkaus         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS = srcs/*.c
 
 LIBFT = ../libft/libft.a
 
-SRC_FILES = corewar.c get_players.c validate_champ.c op.c
+SRC_FILES = corewar.c get_players.c validate_champ.c op.c flags.c
 SRC_PATH = ./srcs/
 SRC = $(addprefix $(SRC_PATH), $(SRC_FILES))
 

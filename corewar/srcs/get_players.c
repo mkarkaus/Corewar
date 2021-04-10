@@ -6,11 +6,18 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:05:57 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 14:23:10 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 17:38:05 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/corewar.h"
+
+/*
+**	Reads from file descriptor all the properties of the champion straight 
+**	to the struct 't_player' in order and skips 4 bytes of zeroes with lseek
+**	which are padding the name and comment. This function also reverses the
+**	order of bytes of integers so that they show the right decimal value.
+*/
 
 void	get_player_code(char *file, t_player *players)
 {
@@ -31,6 +38,7 @@ void	get_player_code(char *file, t_player *players)
 		read(fd, &(players->code), CHAMP_MAX_SIZE);
 		ft_byterev((uint8_t *)&(players->header.magic), sizeof(int));
 		ft_byterev((uint8_t *)&(players->header.prog_size), sizeof(int));
+		players->next = NULL;
 
 		ft_pr_hex((void *)&players->header.magic, sizeof(int), 1);
 		ft_printf("%u\n", players->header.magic);
@@ -48,6 +56,6 @@ void	get_player_code(char *file, t_player *players)
 		// validate_champ(content);
 	}
 	else
-		ft_printf("{red}Error while opening file: %s{r}\n", strerror(errno));
+		ft_exit("Error while opening file.\n");
 	close(fd);
 }

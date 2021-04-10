@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:33:24 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 14:06:47 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 17:45:46 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -122,7 +122,9 @@
 
 typedef struct	s_corewar
 {
-	int			nbr_of_players;
+	int		visuf;
+	int		dumpf;		
+	int		nbr_of_players;
 }				t_corewar;
 
 // /*
@@ -323,6 +325,7 @@ static const t_op    op_tab[17] =
 	}
 };
 
+void	set_flag(char **argv, t_player *player);
 void	get_player_code(char *file, t_player *players);
 int		validate_champ();
 
