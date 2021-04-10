@@ -6,11 +6,13 @@
 /*   By: sreijola <sreijola@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:59:40 by sreijola          #+#    #+#             */
-/*   Updated: 2021/04/10 12:03:41 by sreijola         ###   ########.fr       */
+/*   Updated: 2021/04/10 12:24:08 by sreijola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_exit(char *errstr)
+#include "../../includes/libft.h"
+
+void		ft_exit(char *errstr)
 {
 	ft_printf("{red}%s{r}", errstr);
 	exit(-1);

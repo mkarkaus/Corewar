@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
+/*   By: sreijola <sreijola@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 14:57:46 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/09 16:26:03 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 12:26:19 by sreijola         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,7 @@ int				ft_tabnequ(int *t1, int *t2, int n);
 int				ft_strarr_size(char **arr);
 void			ft_strarr_free(char **arr);
 void			ft_strarr_print(char **arr);
+
+void			ft_exit(char *errstr);
 
 #endif

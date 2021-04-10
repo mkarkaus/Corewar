@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+         #
+#    By: sreijola <sreijola@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/30 11:50:18 by mkarkaus          #+#    #+#              #
-#    Updated: 2021/04/09 13:04:50 by mkarkaus         ###   ########.fr        #
+#    Updated: 2021/04/10 12:20:12 by sreijola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ ft_strrev.c ft_strcut.c ft_onlydigits.c ft_free_array.c ft_pr_intarr.c \
 ft_pr_chararr.c ft_lstapp.c ft_lstprint.c ft_strarr_free.c ft_strarr_malloc.c \
 ft_strarrsize.c ft_lstfree.c ft_lstlen.c ft_lstprintint.c ft_strarr_print.c \
 ft_strarr_size.c ft_tabarr_free.c ft_tabarr_malloc.c ft_tabint_find.c \
-ft_tabnequ.c ft_arr_free.c ft_arr_malloc.c ft_strcat.c ft_pr_hex.c
+ft_tabnequ.c ft_arr_free.c ft_arr_malloc.c ft_strcat.c ft_pr_hex.c ft_exit.c
 
 LIBFT_SRC = $(addprefix $(LIBFT_SRC_PATH), $(LIBFT_SRC_FILES))
 
