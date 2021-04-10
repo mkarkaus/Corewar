@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:33:24 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/09 16:43:42 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 11:11:02 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,7 @@ typedef struct	s_corewar
 typedef struct	s_player
 {
 	header_t		header;
+	unsigned char	code[CHAMP_MAX_SIZE];
 	unsigned int	nbr;
 	struct s_player	*next;
 }				t_player;
@@ -322,7 +323,7 @@ static const t_op    op_tab[17] =
 	}
 };
 
-void	get_player_code(char *file);
+void	get_player_code(char *file, t_player *players);
 int		validate_champ();
 
 #endif

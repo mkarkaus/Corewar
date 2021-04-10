@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 13:40:48 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/09 13:03:25 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 10:24:43 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ void	print_usage()
 
 int		main(int argc, char **argv)
 {
-	int		i;
+	t_player	players;
+	int			i;
 
 	i = 0;
 	
 	if (argc > 1)
 	{
 		while (++i < argc)
-			get_player_code(argv[i]);
+			get_player_code(argv[i], &players);
 	}
 	else
 		print_usage();
