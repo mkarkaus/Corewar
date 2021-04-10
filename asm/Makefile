@@ -6,13 +6,13 @@
 #    By: sreijola <sreijola@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/03 11:35:45 by sreijola          #+#    #+#              #
-#    Updated: 2021/04/03 13:09:50 by sreijola         ###   ########.fr        #
+#    Updated: 2021/04/03 13:37:16 by sreijola         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
 
-NAME = sreijola.filler
+NAME = asm
 
 SRCS_ASM = main.c
 
