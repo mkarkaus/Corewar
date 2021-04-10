@@ -6,11 +6,11 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 16:05:57 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 11:50:15 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 14:23:10 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/corewar.h"
+#include "../includes/corewar.h"
 
 void	get_player_code(char *file, t_player *players)
 {
@@ -29,9 +29,11 @@ void	get_player_code(char *file, t_player *players)
 		read(fd, players->header.comment, COMMENT_LENGTH);
 		lseek(fd, 4, SEEK_CUR);
 		read(fd, &(players->code), CHAMP_MAX_SIZE);
-		
+		ft_byterev((uint8_t *)&(players->header.magic), sizeof(int));
+		ft_byterev((uint8_t *)&(players->header.prog_size), sizeof(int));
 
 		ft_pr_hex((void *)&players->header.magic, sizeof(int), 1);
+		ft_printf("%u\n", players->header.magic);
 		ft_printf("\n");
 		ft_pr_hex(players->header.prog_name, PROG_NAME_LENGTH, 1);
 		ft_printf("\n");
@@ -40,13 +42,12 @@ void	get_player_code(char *file, t_player *players)
 		ft_printf("\n");
 		ft_pr_hex(players->header.comment, COMMENT_LENGTH, 1);
 		ft_printf("\n");
-		ft_pr_hex(players->code, CHAMP_MAX_SIZE, 1);
+		ft_pr_hex(players->code, 1000, 1);
 		exit(1);
-		
+
 		// validate_champ(content);
 	}
 	else
 		ft_printf("{red}Error while opening file: %s{r}\n", strerror(errno));
 	close(fd);
 }
-

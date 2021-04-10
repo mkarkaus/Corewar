@@ -6,11 +6,11 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2013/10/04 11:43:01 by zaz               #+#    #+#             */
-/*   Updated: 2021/04/08 19:28:24 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 14:05:38 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/corewar.h"
+#include "../includes/corewar.h"
 
 // t_op    op_tab[17] =
 // {

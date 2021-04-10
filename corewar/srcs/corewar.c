@@ -6,11 +6,11 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 13:40:48 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 10:24:43 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 14:05:54 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/corewar.h"
+#include "../includes/corewar.h"
 
 void	print_usage()
 {

@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:33:24 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 11:11:02 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/10 14:06:47 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 # include <sys/stat.h>
 # include <stdio.h>
 # include <errno.h>
-# include "../libft/includes/libft.h"
-# include "op.h"
+# include "../../libft/includes/libft.h"
+# include "../../includes/op.h"
 
 /*
 **
