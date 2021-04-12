@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 13:40:48 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 17:47:35 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/12 15:50:56 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,25 +29,28 @@ int		is_filename(char *arg)
 	return (0);
 }
 
-int		main(int argc, char **argv)
+int			main(int ac, char **av)
 {
+	t_corewar	cw;
 	t_player	players;
-	int			i;
 
-	i = 0;
-	
-	if (argc > 1)
+	// cw = (t_corewar *)ft_memalloc(sizeof(t_corewar));
+	if (ac > 1)
 	{
-		while (++i < argc)
+		while (--ac > 0)
 		{
-			if (is_filename(argv[i]))
-				get_player_code(argv[i], &players);
-			// Here could be int that '-n'-flag sets as the int value and puts
-			// it for the next champ it finds from argv
-			else if (argv[i][0] == '-')
-				set_flag(argv + i, &players);
+			av++;
+			ft_printf("1 %s\n", *av);
+			if (is_filename(*av))
+				get_player_code(*av, &players);
+			else if (*av[0] == '-')
+			{
+				ac -= set_flag(&av, &players, &cw, (ac == 1));
+				ft_printf("av:%d\n", cw.nflag);
+			}
 			else
 				print_usage();
+			ft_printf("2 %s\n", *av + 1);
 		}
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: mkarkaus <mkarkaus@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/31 12:33:24 by mkarkaus          #+#    #+#             */
-/*   Updated: 2021/04/10 17:45:46 by mkarkaus         ###   ########.fr       */
+/*   Updated: 2021/04/12 15:51:03 by mkarkaus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,6 +105,33 @@
 **	
 **
 **
+*/
+
+/*
+**	Struct for useful information regarding the virtual machine
+*/
+
+typedef struct	s_corewar
+{
+	int		nflag;
+	int		vflag;
+	int		dflag;
+	int		nbr_of_players;
+}				t_corewar;
+
+/*
+**	Struct to which all the properties of the players are stored
+*/
+
+typedef struct	s_player
+{
+	header_t		header;
+	unsigned char	code[CHAMP_MAX_SIZE];
+	unsigned int	nbr;
+	struct s_player	*next;
+}				t_player;
+
+/*
 **	All the operations and their properties in order:
 **	1. Name of the operation
 **	2. Number of arguments passed
@@ -115,29 +142,6 @@
 **	7. Indicates if there is or isn't coding byte before arguments
 **	8. 
 */
-
-/*
-**	Struct for useful information regarding the virtual machine
-*/
-
-typedef struct	s_corewar
-{
-	int		visuf;
-	int		dumpf;		
-	int		nbr_of_players;
-}				t_corewar;
-
-// /*
-// **	Struct to which all the properties of the players are stored
-// */
-
-typedef struct	s_player
-{
-	header_t		header;
-	unsigned char	code[CHAMP_MAX_SIZE];
-	unsigned int	nbr;
-	struct s_player	*next;
-}				t_player;
 
 typedef struct	s_op
 {
@@ -325,7 +329,7 @@ static const t_op    op_tab[17] =
 	}
 };
 
-void	set_flag(char **argv, t_player *player);
+int		set_flag(char ***av, t_player *player, t_corewar *cw, int is_last);
 void	get_player_code(char *file, t_player *players);
 int		validate_champ();
 
